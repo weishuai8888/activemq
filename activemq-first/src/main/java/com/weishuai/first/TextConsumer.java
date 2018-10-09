@@ -5,6 +5,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 
 /**
+ * PTP - 主动消费（消息的消费者）
  * 消息的接收者
  * Created by WS on 2018/10/9.
  */
