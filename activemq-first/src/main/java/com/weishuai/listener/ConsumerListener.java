@@ -3,7 +3,6 @@ package com.weishuai.listener;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
-import java.io.Serializable;
 
 /**
  * PTP - 观察者消费(消息接收者-监听器)
