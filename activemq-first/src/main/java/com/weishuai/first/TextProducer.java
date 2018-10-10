@@ -36,7 +36,7 @@ public class TextProducer {
             //无参构造；有默认的连接地址。本地连接：tcp://localhost:61616。
             //单参数构造：无验证模式的（任何人都可以发送、接收消息）
             //三参数构造：有认证 + 指定地址。默认端口：61616.可以从ActiveMQ的conf/activemq.xml配置文件中查看。
-            factory = new ActiveMQConnectionFactory("guest", "guest", "tcp://192.168.107.128:61616");
+            factory = new ActiveMQConnectionFactory("admin", "admin", "tcp://192.168.107.128:61616");
 
             //通过工厂，创建连接对象
             //创建连接的方法有重载，其中creatConnection(String userName, String password)

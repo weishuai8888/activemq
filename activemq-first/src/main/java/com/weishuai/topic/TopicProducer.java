@@ -22,7 +22,7 @@ public class TopicProducer {
 
         try {
             //创建工厂
-            factory = new ActiveMQConnectionFactory("guest", "guest,", "tcp://192.168.107.128:61616");
+            factory = new ActiveMQConnectionFactory("admin", "admin", "tcp://192.168.107.128:61616");
             //创建连接
             connection = factory.createConnection();
             //开启连接 建议启动；消息的发送者不必启动，消息的接收者必须启动
