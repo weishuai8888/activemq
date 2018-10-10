@@ -19,14 +19,22 @@ public class ObjectProducer {
         Message message = null;
 
         try {
+            //创建工厂
             factory = new ActiveMQConnectionFactory("admin", "admin", "tcp://192.168.107.128:61616");
+            //创建连接
             connection = factory.createConnection();
+            //开启连接
             connection.start();
+            //创建会话
             session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
+            //创建目的地
             destination = session.createQueue("test-listener");
+            //消息发送者
             producer = session.createProducer(destination);
             for (int i = 0; i < 100; i++){
+                //创建消息文本对象
                 message = session.createObjectMessage(i);
+                //发送消息
                 producer.send(message);
             }
         } catch (JMSException e) {
